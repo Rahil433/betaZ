@@ -4,29 +4,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
   <title>BetaZLabs | Future Skills & Creative Technology for Grades 5–9</title>
-  <meta name="description" content="BetaZLabs empowers students in Grades 5–9 with hands-on coding, robotics, IoT, and future problem-solving skills.">
+  <meta name="description" content="BetaZLabs empowers school students in Grades 5–9 with hands-on coding, robotics, IoT, and 21st-century problem-solving capabilities.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800;900&family=Fira+Code:wght@500&display=swap" rel="stylesheet">
   
   <style>
-    /* ==========================================================
-       CSS TOKENS & DYNAMIC COLOR SHIFT ENGINE
-       ========================================================== */
     :root {
       --bg-base: #060913;
-      --bg-surface: rgba(14, 20, 40, 0.7);
-      --bg-surface-hover: rgba(22, 32, 64, 0.85);
+      --bg-surface: rgba(13, 20, 42, 0.72);
+      --bg-surface-hover: rgba(22, 33, 68, 0.88);
       --border-subtle: rgba(255, 255, 255, 0.08);
-      --border-bright: rgba(0, 242, 254, 0.3);
+      --border-bright: rgba(0, 242, 254, 0.35);
       
-      /* Vibrant Dynamic Student Palette */
+      /* Vibrant Dynamic Student-Friendly Color Palette */
       --cyan: #00F2FE;
-      --blue: #4FACFE;
-      --purple: #8A2387;
-      --pink: #E94057;
-      --amber: #F27121;
-      --emerald: #00F5D4;
+      --blue: #3B82F6;
+      --purple: #8B5CF6;
+      --pink: #EC4899;
+      --amber: #F59E0B;
+      --emerald: #10B981;
       
       --text-main: #FFFFFF;
       --text-muted: #94A3B8;
@@ -39,8 +36,9 @@
       
       --font-display: 'Outfit', sans-serif;
       --font-body: 'Plus Jakarta Sans', sans-serif;
+      --font-mono: 'Fira Code', monospace;
       
-      --shadow-glow: 0 0 40px rgba(0, 242, 254, 0.15);
+      --shadow-glow: 0 0 45px rgba(0, 242, 254, 0.2);
     }
 
     *, *::before, *::after {
@@ -66,7 +64,7 @@
       min-height: 100vh;
     }
 
-    /* Dynamic Aurora Backlight Ambient Glow */
+    /* Ambient Dynamic Aurora Backlight */
     .aurora-bg {
       position: fixed;
       inset: 0;
@@ -77,14 +75,14 @@
 
     .aurora-blob {
       position: absolute;
-      filter: blur(100px);
-      opacity: 0.28;
+      filter: blur(110px);
+      opacity: 0.32;
       border-radius: 50%;
-      animation: floatAurora 18s ease-in-out infinite alternate;
+      animation: floatAurora 20s ease-in-out infinite alternate;
     }
 
     .blob-1 {
-      top: -10%;
+      top: -12%;
       left: -10%;
       width: 60vw;
       height: 60vw;
@@ -92,30 +90,29 @@
     }
 
     .blob-2 {
-      top: 40%;
-      right: -15%;
+      top: 38%;
+      right: -12%;
       width: 55vw;
       height: 55vw;
       background: radial-gradient(circle, var(--purple), var(--pink), transparent 70%);
-      animation-delay: -6s;
+      animation-delay: -7s;
     }
 
     .blob-3 {
       bottom: -10%;
-      left: 20%;
+      left: 18%;
       width: 50vw;
       height: 50vw;
-      background: radial-gradient(circle, var(--amber), transparent 70%);
-      animation-delay: -12s;
+      background: radial-gradient(circle, var(--emerald), var(--blue), transparent 70%);
+      animation-delay: -14s;
     }
 
     @keyframes floatAurora {
       0% { transform: translate(0, 0) scale(1) rotate(0deg); }
-      50% { transform: translate(60px, 40px) scale(1.1) rotate(60deg); }
-      100% { transform: translate(-40px, 80px) scale(0.95) rotate(120deg); }
+      50% { transform: translate(60px, 50px) scale(1.1) rotate(60deg); }
+      100% { transform: translate(-50px, 70px) scale(0.95) rotate(120deg); }
     }
 
-    /* Interactive Constellation Canvas */
     #spaceCanvas {
       position: absolute;
       inset: 0;
@@ -130,7 +127,6 @@
       z-index: 2;
     }
 
-    /* Layout Utility */
     .container {
       width: 100%;
       max-width: 1200px;
@@ -138,7 +134,7 @@
       padding: 0 24px;
     }
 
-    /* Typography */
+    /* Typography & Animations */
     h1, h2, h3, h4 {
       font-family: var(--font-display);
       font-weight: 800;
@@ -146,17 +142,11 @@
     }
 
     .gradient-text {
-      background: linear-gradient(135deg, var(--cyan) 0%, var(--blue) 40%, var(--pink) 100%);
+      background: linear-gradient(135deg, var(--cyan) 0%, var(--blue) 45%, var(--pink) 100%);
       background-size: 200% auto;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      animation: shiftGradient 8s ease infinite;
-    }
-
-    .gradient-text-alt {
-      background: linear-gradient(135deg, var(--emerald) 0%, var(--cyan) 50%, var(--blue) 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      animation: shiftGradient 7s ease infinite;
     }
 
     @keyframes shiftGradient {
@@ -164,9 +154,6 @@
       50% { background-position: 100% 50%; }
     }
 
-    /* ==========================================================
-       DESKTOP & UNIVERSAL NAVBAR
-       ========================================================== */
     .header-nav {
       position: fixed;
       top: 16px;
@@ -177,7 +164,7 @@
     }
 
     .nav-inner {
-      background: rgba(10, 15, 30, 0.75);
+      background: rgba(10, 16, 35, 0.78);
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
       border: 1px solid var(--border-subtle);
@@ -186,7 +173,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
     }
 
     .brand-logo {
@@ -208,13 +195,13 @@
       background: linear-gradient(135deg, var(--cyan), var(--purple));
       display: grid;
       place-items: center;
-      box-shadow: 0 0 16px rgba(0, 242, 254, 0.4);
+      box-shadow: 0 0 18px rgba(0, 242, 254, 0.45);
     }
 
     .nav-links-desktop {
       display: flex;
       align-items: center;
-      gap: 32px;
+      gap: 30px;
       list-style: none;
     }
 
@@ -244,6 +231,7 @@
       transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
       cursor: pointer;
       border: none;
+      white-space: nowrap;
     }
 
     .btn-login {
@@ -282,9 +270,7 @@
       border-color: rgba(255, 255, 255, 0.25);
     }
 
-    /* ==========================================================
-       UNIQUE MOBILE APP-STYLE FLOATING INTERACTION BAR
-       ========================================================== */
+    /* Mobile Hamburger Trigger */
     .mobile-hamburger-btn {
       display: none;
       background: transparent;
@@ -331,11 +317,11 @@
       background: var(--cyan);
     }
 
-    /* Mobile Full-Screen Modern Drawer */
+    /* Mobile Fullscreen Drawer */
     .mobile-menu-drawer {
       position: fixed;
       inset: 0;
-      background: rgba(6, 9, 19, 0.94);
+      background: rgba(6, 9, 19, 0.95);
       backdrop-filter: blur(30px);
       -webkit-backdrop-filter: blur(30px);
       z-index: 999;
@@ -359,13 +345,13 @@
       list-style: none;
       display: flex;
       flex-direction: column;
-      gap: 20px;
+      gap: 24px;
       text-align: center;
     }
 
     .mobile-nav-list a {
       color: #FFF;
-      font-size: 1.75rem;
+      font-size: 1.8rem;
       font-family: var(--font-display);
       font-weight: 700;
       text-decoration: none;
@@ -379,14 +365,7 @@
       transform: scale(1.05);
     }
 
-    .mobile-drawer-footer {
-      margin-top: 40px;
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-
-    /* Floating Quick Dock for Mobile Bottom */
+    /* Mobile Quick Access Bottom Dock */
     .mobile-bottom-dock {
       display: none;
       position: fixed;
@@ -394,15 +373,15 @@
       left: 50%;
       transform: translateX(-50%);
       z-index: 900;
-      width: calc(100% - 40px);
+      width: calc(100% - 36px);
       max-width: 420px;
-      background: rgba(14, 20, 40, 0.85);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border: 1px solid rgba(255, 255, 255, 0.15);
+      background: rgba(13, 20, 42, 0.88);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border: 1px solid rgba(255, 255, 255, 0.16);
       border-radius: var(--radius-pill);
       padding: 8px 12px;
-      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 242, 254, 0.15);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6), 0 0 20px rgba(0, 242, 254, 0.16);
       justify-content: space-around;
       align-items: center;
     }
@@ -429,7 +408,7 @@
 
     .dock-btn.active, .dock-btn:hover {
       color: var(--cyan);
-      background: rgba(0, 242, 254, 0.08);
+      background: rgba(0, 242, 254, 0.1);
     }
 
     .dock-btn-cta {
@@ -439,11 +418,8 @@
       font-weight: 800;
     }
 
-    /* ==========================================================
-       HERO SECTION
-       ========================================================== */
     .hero-section {
-      min-height: 92vh;
+      min-height: 94vh;
       display: flex;
       align-items: center;
       position: relative;
@@ -473,7 +449,7 @@
       box-shadow: 0 0 20px rgba(0, 242, 254, 0.15);
     }
 
-    .badge-pill span.pulse-dot {
+    .pulse-dot {
       width: 8px;
       height: 8px;
       background: var(--cyan);
@@ -488,7 +464,7 @@
     }
 
     .hero-title {
-      font-size: clamp(2.5rem, 5vw, 4.4rem);
+      font-size: clamp(2.5rem, 5.2vw, 4.4rem);
       letter-spacing: -1.5px;
       margin-bottom: 20px;
     }
@@ -518,11 +494,11 @@
       align-items: center;
       gap: 6px;
       font-size: 0.85rem;
-      color: var(--text-dim);
-      background: rgba(255, 255, 255, 0.03);
+      color: #CBD5E1;
+      background: rgba(255, 255, 255, 0.04);
       padding: 6px 14px;
       border-radius: var(--radius-pill);
-      border: 1px solid rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.07);
     }
 
     .tag-item svg {
@@ -531,98 +507,134 @@
       stroke: var(--emerald);
     }
 
-    /* Hero Interactive Student Visual Card */
-    .hero-visual-card {
+    /* Futuristic STEM Node Core Interactive Visual */
+    .stem-node-container {
       position: relative;
-      background: linear-gradient(145deg, rgba(20, 28, 55, 0.7), rgba(8, 12, 26, 0.8));
+      background: radial-gradient(circle at 50% 50%, rgba(26, 38, 77, 0.8), rgba(9, 14, 30, 0.95));
       border: 1px solid var(--border-bright);
       border-radius: var(--radius-lg);
-      padding: 32px;
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), var(--shadow-glow);
-      backdrop-filter: blur(16px);
+      padding: 40px 30px;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.55), var(--shadow-glow);
+      backdrop-filter: blur(18px);
       overflow: hidden;
-    }
-
-    .visual-header {
+      min-height: 420px;
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      border-bottom: 1px solid var(--border-subtle);
-      padding-bottom: 16px;
-      margin-bottom: 24px;
+      justify-content: center;
+      transition: transform 0.4s ease, border-color 0.4s ease;
     }
 
-    .visual-dots {
-      display: flex;
-      gap: 6px;
+    .stem-node-container:hover {
+      border-color: rgba(0, 242, 254, 0.6);
+      transform: translateY(-4px);
     }
 
-    .visual-dots span {
-      width: 10px;
-      height: 10px;
+    .core-rings-wrapper {
+      position: relative;
+      width: 260px;
+      height: 260px;
+      display: grid;
+      place-items: center;
+    }
+
+    .core-ring {
+      position: absolute;
       border-radius: 50%;
+      border: 1px dashed rgba(0, 242, 254, 0.35);
+      animation: spinRing 24s linear infinite;
     }
 
-    .visual-dots span:nth-child(1) { background: #FF5F56; }
-    .visual-dots span:nth-child(2) { background: #FFBD2E; }
-    .visual-dots span:nth-child(3) { background: #27C93F; }
-
-    .spark-icon {
-      animation: spinSlow 12s linear infinite;
+    .ring-1 {
+      width: 250px;
+      height: 250px;
+      border-color: rgba(0, 242, 254, 0.25);
     }
 
-    @keyframes spinSlow {
+    .ring-2 {
+      width: 190px;
+      height: 190px;
+      border: 1.5px dotted rgba(139, 92, 246, 0.4);
+      animation: spinRingReverse 16s linear infinite;
+    }
+
+    .ring-3 {
+      width: 130px;
+      height: 130px;
+      border: 1px solid rgba(236, 72, 153, 0.35);
+    }
+
+    @keyframes spinRing {
       from { transform: rotate(0deg); }
       to { transform: rotate(360deg); }
     }
 
-    .visual-content-box {
-      text-align: center;
-      padding: 20px 0;
+    @keyframes spinRingReverse {
+      from { transform: rotate(360deg); }
+      to { transform: rotate(0deg); }
     }
 
-    .fun-robot-badge {
-      width: 80px;
-      height: 80px;
-      margin: 0 auto 16px;
+    .core-center-orb {
+      width: 84px;
+      height: 84px;
+      border-radius: 50%;
       background: linear-gradient(135deg, var(--cyan), var(--purple));
-      border-radius: 24px;
+      box-shadow: 0 0 35px rgba(0, 242, 254, 0.6), inset 0 0 15px rgba(255, 255, 255, 0.5);
       display: grid;
       place-items: center;
-      box-shadow: 0 10px 30px rgba(0, 242, 254, 0.3);
-      animation: bounceFloat 4s ease-in-out infinite alternate;
+      position: relative;
+      z-index: 2;
+      animation: pulseOrb 3.5s ease-in-out infinite alternate;
     }
 
-    @keyframes bounceFloat {
-      0% { transform: translateY(0) rotate(0deg); }
-      100% { transform: translateY(-10px) rotate(4deg); }
+    @keyframes pulseOrb {
+      0% { transform: scale(0.96); box-shadow: 0 0 25px rgba(0, 242, 254, 0.4); }
+      100% { transform: scale(1.05); box-shadow: 0 0 45px rgba(236, 72, 153, 0.6); }
     }
 
-    .visual-skill-pills {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 10px;
-      margin-top: 24px;
-    }
-
-    .skill-pill {
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      padding: 6px 14px;
+    /* Satellite Floating Badges */
+    .satellite-node {
+      position: absolute;
+      background: rgba(11, 19, 44, 0.88);
+      border: 1px solid var(--border-bright);
+      padding: 7px 13px;
       border-radius: var(--radius-pill);
-      font-size: 0.82rem;
-      font-weight: 600;
-      color: #E2E8F0;
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: #FFF;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(10px);
+      transition: all 0.3s ease;
+      z-index: 3;
     }
 
-    /* ==========================================================
-       SECTION HEADINGS
-       ========================================================== */
+    .satellite-node:hover {
+      transform: scale(1.08);
+      border-color: #FFF;
+    }
+
+    .sat-1 { top: 22px; left: 24px; animation: floatNode 5s ease-in-out infinite alternate; }
+    .sat-2 { top: 28px; right: 20px; animation: floatNode 6s ease-in-out infinite alternate -1.5s; }
+    .sat-3 { bottom: 26px; left: 30px; animation: floatNode 5.5s ease-in-out infinite alternate -3s; }
+    .sat-4 { bottom: 30px; right: 24px; animation: floatNode 6.5s ease-in-out infinite alternate -2s; }
+
+    @keyframes floatNode {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-7px); }
+    }
+
+    .sat-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+    }
+
     .section-header {
       text-align: center;
       max-width: 680px;
-      margin: 0 auto 56px;
+      margin: 0 auto 48px;
     }
 
     .section-tag {
@@ -636,7 +648,7 @@
     }
 
     .section-title {
-      font-size: clamp(2rem, 3.5vw, 2.8rem);
+      font-size: clamp(2rem, 3.6vw, 2.9rem);
       letter-spacing: -0.5px;
       margin-bottom: 16px;
     }
@@ -646,120 +658,170 @@
       font-size: 1.05rem;
     }
 
-    /* ==========================================================
-       GRADE PROGRESSION CARDS (NO BIG PROJECTS, CLEAN EXPLANATION)
-       ========================================================== */
+    /* Grade Selector Module */
     .programs-section {
       padding: 90px 0;
       position: relative;
     }
 
-    .grades-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 24px;
+    .grade-selector-nav {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 36px;
     }
 
-    .grade-card {
-      background: var(--bg-surface);
+    .grade-tab-btn {
+      background: rgba(255, 255, 255, 0.04);
       border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-lg);
-      padding: 30px 24px;
-      position: relative;
+      border-radius: var(--radius-pill);
+      padding: 10px 22px;
+      color: var(--text-muted);
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
       display: flex;
-      flex-direction: column;
-      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-      backdrop-filter: blur(12px);
-      overflow: hidden;
-    }
-
-    .grade-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 4px;
-      background: linear-gradient(90deg, var(--c-start, var(--cyan)), var(--c-end, var(--blue)));
-      opacity: 0.8;
-      transition: height 0.3s ease;
-    }
-
-    .grade-card:hover {
-      transform: translateY(-8px);
-      border-color: rgba(255, 255, 255, 0.2);
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-    }
-
-    .grade-card:hover::before {
-      height: 6px;
-    }
-
-    .grade-top-bar {
-      display: flex;
-      justify-content: space-between;
       align-items: center;
+      gap: 8px;
+    }
+
+    .grade-tab-btn:hover {
+      color: #FFF;
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(0, 242, 254, 0.3);
+      transform: translateY(-2px);
+    }
+
+    .grade-tab-btn.active {
+      background: linear-gradient(135deg, rgba(0, 242, 254, 0.2), rgba(139, 92, 246, 0.25));
+      border-color: var(--cyan);
+      color: #FFF;
+      box-shadow: 0 0 25px rgba(0, 242, 254, 0.3);
+    }
+
+    .grade-tab-btn .tab-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--cyan);
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+
+    .grade-tab-btn.active .tab-dot {
+      opacity: 1;
+    }
+
+    /* Grade Display Showcase Card */
+    .grade-showcase-box {
+      background: linear-gradient(145deg, rgba(16, 24, 52, 0.8), rgba(9, 14, 32, 0.95));
+      border: 1px solid var(--border-bright);
+      border-radius: var(--radius-lg);
+      padding: clamp(28px, 4vw, 44px);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), var(--shadow-glow);
+      backdrop-filter: blur(20px);
+      position: relative;
+      overflow: hidden;
+      transition: all 0.4s ease;
+    }
+
+    .grade-content-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .grade-meta-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
       margin-bottom: 16px;
     }
 
-    .grade-number-badge {
+    .grade-badge-tag {
       font-family: var(--font-display);
       font-weight: 800;
-      font-size: 0.9rem;
-      padding: 6px 14px;
+      font-size: 0.85rem;
+      padding: 5px 14px;
       border-radius: var(--radius-pill);
+      background: rgba(0, 242, 254, 0.12);
+      border: 1px solid rgba(0, 242, 254, 0.35);
+      color: var(--cyan);
+    }
+
+    .grade-display-title {
+      font-size: clamp(1.8rem, 3.2vw, 2.4rem);
+      margin-bottom: 14px;
+      color: #FFF;
+    }
+
+    .grade-display-desc {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin-bottom: 24px;
+    }
+
+    .grade-skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .grade-skill-chip {
       background: rgba(255, 255, 255, 0.05);
       border: 1px solid rgba(255, 255, 255, 0.1);
-      color: #FFF;
-    }
-
-    .grade-card-title {
-      font-size: 1.45rem;
-      margin-bottom: 12px;
-      color: #FFF;
-    }
-
-    .grade-card-desc {
-      color: var(--text-muted);
-      font-size: 0.95rem;
-      margin-bottom: 24px;
-      flex-grow: 1;
-    }
-
-    .grade-focus-list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      border-top: 1px solid rgba(255, 255, 255, 0.05);
-      padding-top: 16px;
-    }
-
-    .grade-focus-item {
+      padding: 7px 15px;
+      border-radius: var(--radius-pill);
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #E2E8F0;
       display: flex;
       align-items: center;
-      gap: 10px;
-      font-size: 0.88rem;
-      color: var(--text-dim);
+      gap: 6px;
     }
 
-    .grade-focus-item svg {
-      width: 16px;
-      height: 16px;
+    .grade-skill-chip span.chip-star {
       color: var(--cyan);
-      flex-shrink: 0;
     }
 
-    /* Colorful card borders */
-    .grade-5 { --c-start: #00F2FE; --c-end: #4FACFE; }
-    .grade-6 { --c-start: #4FACFE; --c-end: #8A2387; }
-    .grade-7 { --c-start: #8A2387; --c-end: #E94057; }
-    .grade-8 { --c-start: #E94057; --c-end: #F27121; }
-    .grade-9 { --c-start: #F27121; --c-end: #00F5D4; }
+    /* Grade Side Graphic Card */
+    .grade-graphic-card {
+      background: rgba(7, 12, 26, 0.8);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: var(--radius-md);
+      padding: 30px 24px;
+      text-align: center;
+      position: relative;
+    }
 
-    /* ==========================================================
-       LEARNING JOURNEY (01 DISCOVER -> 05 SOLVE)
-       ========================================================== */
+    .grade-icon-avatar {
+      width: 72px;
+      height: 72px;
+      border-radius: 20px;
+      margin: 0 auto 18px;
+      background: linear-gradient(135deg, var(--cyan), var(--purple));
+      display: grid;
+      place-items: center;
+      box-shadow: 0 10px 25px rgba(0, 242, 254, 0.3);
+    }
+
+    .grade-highlight-title {
+      font-size: 1.2rem;
+      color: #FFF;
+      margin-bottom: 6px;
+    }
+
+    .grade-highlight-sub {
+      color: var(--text-dim);
+      font-size: 0.88rem;
+    }
+
     .journey-section {
       padding: 90px 0;
       position: relative;
@@ -769,7 +831,6 @@
       display: grid;
       grid-template-columns: repeat(5, 1fr);
       gap: 16px;
-      position: relative;
     }
 
     .journey-step-card {
@@ -778,20 +839,20 @@
       border-radius: var(--radius-md);
       padding: 24px 18px;
       text-align: center;
-      transition: all 0.3s ease;
+      transition: all 0.35s ease;
       position: relative;
     }
 
     .journey-step-card:hover {
       border-color: var(--cyan);
       transform: translateY(-6px);
-      box-shadow: 0 12px 30px rgba(0, 242, 254, 0.15);
+      box-shadow: 0 12px 30px rgba(0, 242, 254, 0.18);
     }
 
     .step-badge {
       display: inline-block;
       font-family: var(--font-display);
-      font-size: 0.85rem;
+      font-size: 0.82rem;
       font-weight: 800;
       color: var(--cyan);
       background: rgba(0, 242, 254, 0.1);
@@ -801,7 +862,7 @@
     }
 
     .step-card-title {
-      font-size: 1.25rem;
+      font-size: 1.22rem;
       margin-bottom: 8px;
       color: #FFF;
     }
@@ -811,9 +872,7 @@
       color: var(--text-muted);
     }
 
-    /* ==========================================================
-       WHY LEARN WITH BETAZLABS (6 PILLARS)
-       ========================================================== */
+    /* Why BetaZLabs Section */
     .why-section {
       padding: 90px 0;
     }
@@ -841,8 +900,8 @@
     }
 
     .why-icon-box {
-      width: 46px;
-      height: 46px;
+      width: 48px;
+      height: 48px;
       border-radius: 14px;
       background: rgba(255, 255, 255, 0.05);
       display: grid;
@@ -867,11 +926,9 @@
       font-size: 0.92rem;
     }
 
-    /* ==========================================================
-       TECH BADGES SECTION
-       ========================================================== */
+    /* Technology Badges */
     .tech-section {
-      padding: 60px 0 90px;
+      padding: 50px 0 80px;
     }
 
     .tech-pill-container {
@@ -879,7 +936,7 @@
       flex-wrap: wrap;
       justify-content: center;
       gap: 14px;
-      max-width: 860px;
+      max-width: 880px;
       margin: 0 auto;
     }
 
@@ -904,16 +961,13 @@
       color: var(--cyan);
     }
 
-    /* ==========================================================
-       CONTACT SECTION (CLEAN FORM, SAMPLE EMAIL ONLY)
-       ========================================================== */
     .contact-section {
-      padding: 100px 0;
+      padding: 90px 0;
       position: relative;
     }
 
     .contact-card-wrap {
-      background: linear-gradient(145deg, rgba(16, 23, 46, 0.85), rgba(9, 13, 27, 0.95));
+      background: linear-gradient(145deg, rgba(16, 24, 50, 0.85), rgba(9, 14, 30, 0.95));
       border: 1px solid var(--border-bright);
       border-radius: var(--radius-lg);
       padding: 48px;
@@ -924,7 +978,7 @@
     }
 
     .contact-info-col h3 {
-      font-size: 2rem;
+      font-size: 2.1rem;
       margin-bottom: 16px;
     }
 
@@ -957,7 +1011,7 @@
       color: var(--cyan);
     }
 
-    /* Web3Forms Static Integration */
+    /* Web3Forms Static Form (No Personal Email) */
     .contact-form {
       display: flex;
       flex-direction: column;
@@ -1009,21 +1063,19 @@
 
     .form-status.success {
       display: block;
-      background: rgba(0, 245, 212, 0.15);
+      background: rgba(16, 185, 129, 0.15);
       border: 1px solid var(--emerald);
       color: var(--emerald);
     }
 
     .form-status.error {
       display: block;
-      background: rgba(233, 64, 87, 0.15);
+      background: rgba(236, 72, 153, 0.15);
       border: 1px solid var(--pink);
       color: var(--pink);
     }
 
-    /* ==========================================================
-       FOOTER
-       ========================================================== */
+    /* Footer */
     .site-footer {
       border-top: 1px solid var(--border-subtle);
       background: #04060C;
@@ -1071,9 +1123,7 @@
       gap: 16px;
     }
 
-    /* ==========================================================
-       MOBILE OPTIMIZATIONS & MEDIA QUERIES
-       ========================================================== */
+    /* Responsive Breakpoints */
     @media (max-width: 992px) {
       .hero-grid {
         grid-template-columns: 1fr;
@@ -1086,6 +1136,10 @@
 
       .hero-actions, .hero-tags {
         justify-content: center;
+      }
+
+      .grade-content-grid {
+        grid-template-columns: 1fr;
       }
 
       .contact-card-wrap {
@@ -1130,8 +1184,22 @@
         min-height: auto;
       }
 
+      .stem-node-container {
+        min-height: 340px;
+        padding: 24px 16px;
+      }
+
+      .core-rings-wrapper {
+        width: 210px;
+        height: 210px;
+      }
+
+      .ring-1 { width: 200px; height: 200px; }
+      .ring-2 { width: 150px; height: 150px; }
+      .ring-3 { width: 100px; height: 100px; }
+
       .site-footer {
-        padding-bottom: 120px; /* space for mobile dock */
+        padding-bottom: 120px;
       }
     }
   </style>
@@ -1147,9 +1215,6 @@
 
   <div class="site-wrapper">
     
-    <!-- ==========================================================
-         TOP NAVBAR
-         ========================================================== -->
     <header class="header-nav" id="mainNavbar">
       <div class="container">
         <div class="nav-inner">
@@ -1164,7 +1229,7 @@
             <span>BetaZ<span style="color: var(--cyan);">Labs</span></span>
           </a>
 
-          <!-- Desktop Navigation -->
+          <!-- Desktop Links -->
           <ul class="nav-links-desktop">
             <li><a href="#about">About</a></li>
             <li><a href="#programs">Programs</a></li>
@@ -1178,7 +1243,7 @@
           </a>
 
           <!-- Mobile Hamburger Trigger -->
-          <button class="mobile-hamburger-btn" id="mobileMenuToggle" aria-label="Toggle Navigation">
+          <button class="mobile-hamburger-btn" id="mobileMenuToggle" aria-label="Toggle Menu">
             <div class="hamburger-icon">
               <span></span>
               <span></span>
@@ -1198,14 +1263,14 @@
         <li><a href="#why" class="mobile-nav-link">Why Us</a></li>
         <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
       </ul>
-      <div class="mobile-drawer-footer">
-        <a href="https://betazlabs.com/login" class="btn btn-primary" style="width: 100%;">
+      <div style="margin-top: 36px; text-align: center;">
+        <a href="https://betazlabs.com/login" class="btn btn-primary" style="width: 100%; max-width: 280px;">
           Student Login Portal
         </a>
       </div>
     </div>
 
-    <!-- Mobile App-Style Bottom Dock -->
+    <!-- Mobile App-Style Bottom Quick Access Dock -->
     <nav class="mobile-bottom-dock" aria-label="Mobile Navigation Dock">
       <a href="#programs" class="dock-btn">
         <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -1234,9 +1299,6 @@
       </a>
     </nav>
 
-    <!-- ==========================================================
-         HERO SECTION
-         ========================================================== -->
     <section class="hero-section" id="about">
       <canvas id="spaceCanvas"></canvas>
 
@@ -1254,7 +1316,7 @@
             </h1>
             
             <p class="hero-subtitle">
-              Hands-on coding, robotics, and STEM learning designed to help young minds discover creative problem-solving and real skills through project creation.
+              Hands-on coding, robotics, and STEM learning designed to help young minds develop creative problem-solving, digital agility, and real-world skills.
             </p>
 
             <div class="hero-actions">
@@ -1282,37 +1344,54 @@
             </div>
           </div>
 
-          <!-- Student Friendly Visual Card -->
+          <!-- Futuristic STEM Node Core Interactive Visual (Right Hero) -->
           <div class="hero-right">
-            <div class="hero-visual-card">
-              <div class="visual-header">
-                <div class="visual-dots">
-                  <span></span><span></span><span></span>
-                </div>
-                <div class="spark-icon">✨</div>
+            <div class="stem-node-container" id="stemCoreContainer">
+              
+              <!-- Floating Satellites -->
+              <div class="satellite-node sat-1">
+                <span class="sat-dot" style="background: var(--cyan); box-shadow: 0 0 8px var(--cyan);"></span>
+                <span>Microcontrollers</span>
+              </div>
+              
+              <div class="satellite-node sat-2">
+                <span class="sat-dot" style="background: var(--purple); box-shadow: 0 0 8px var(--purple);"></span>
+                <span>Python Logic</span>
+              </div>
+              
+              <div class="satellite-node sat-3">
+                <span class="sat-dot" style="background: var(--pink); box-shadow: 0 0 8px var(--pink);"></span>
+                <span>Smart Sensors</span>
               </div>
 
-              <div class="visual-content-box">
-                <div class="fun-robot-badge">
-                  <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="#FFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <rect x="3" y="11" width="18" height="10" rx="2"></rect>
-                    <circle cx="12" cy="5" r="2"></circle>
-                    <path d="M12 7v4"></path>
-                    <line x1="8" y1="16" x2="8" y2="16"></line>
-                    <line x1="16" y1="16" x2="16" y2="16"></line>
+              <div class="satellite-node sat-4">
+                <span class="sat-dot" style="background: var(--emerald); box-shadow: 0 0 8px var(--emerald);"></span>
+                <span>IoT Nodes</span>
+              </div>
+
+              <!-- Orbiting Gyro Energy Rings -->
+              <div class="core-rings-wrapper">
+                <div class="core-ring ring-1"></div>
+                <div class="core-ring ring-2"></div>
+                <div class="core-ring ring-3"></div>
+
+                <!-- Center Power Core -->
+                <div class="core-center-orb">
+                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#FFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="4" y="4" width="16" height="16" rx="2"></rect>
+                    <rect x="9" y="9" width="6" height="6"></rect>
+                    <line x1="9" y1="1" x2="9" y2="4"></line>
+                    <line x1="15" y1="1" x2="15" y2="4"></line>
+                    <line x1="9" y1="20" x2="9" y2="23"></line>
+                    <line x1="15" y1="20" x2="15" y2="23"></line>
+                    <line x1="20" y1="9" x2="23" y2="9"></line>
+                    <line x1="20" y1="14" x2="23" y2="14"></line>
+                    <line x1="1" y1="9" x2="4" y2="9"></line>
+                    <line x1="1" y1="14" x2="4" y2="14"></line>
                   </svg>
                 </div>
-                <h4 style="font-size: 1.3rem; margin-bottom: 8px;">Learning by Doing</h4>
-                <p style="color: var(--text-muted); font-size: 0.9rem; max-width: 300px; margin: 0 auto;">
-                  Where curiosity turns into functional inventions, digital confidence, and independent thinking.
-                </p>
-
-                <div class="visual-skill-pills">
-                  <span class="skill-pill">🚀 Robotics</span>
-                  <span class="skill-pill">💻 Creative Coding</span>
-                  <span class="skill-pill">🌐 IoT & Smart Tech</span>
-                </div>
               </div>
+
             </div>
           </div>
 
@@ -1320,140 +1399,82 @@
       </div>
     </section>
 
-    <!-- ==========================================================
-         PROGRAMS SECTION (SIMPLIFIED GRADE BREAKDOWNS)
-         ========================================================== -->
     <section class="programs-section" id="programs">
       <div class="container">
         <div class="section-header">
           <span class="section-tag">Curriculum Progression</span>
-          <h2 class="section-title">Designed for Every Stage of Curiosity</h2>
+          <h2 class="section-title">Explore by Grade Level</h2>
           <p class="section-desc">
-            A step-by-step practical pathway introducing school students to modern technology without unnecessary complexity.
+            Tap a grade level to discover calibrated pathways built for students' evolving cognitive growth and curiosity.
           </p>
         </div>
 
-        <div class="grades-grid">
-          
-          <!-- Grade 5 -->
-          <div class="grade-card grade-5">
-            <div class="grade-top-bar">
-              <span class="grade-number-badge">Grade 5</span>
-            </div>
-            <h3 class="grade-card-title">Creative Coding & 3D Basics</h3>
-            <p class="grade-card-desc">
-              Building visual logic foundations, computational thinking, and spatial design through fun interactive environments.
-            </p>
-            <ul class="grade-focus-list">
-              <li class="grade-focus-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Block-based logic & sequencing
-              </li>
-              <li class="grade-focus-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Creative 3D spatial thinking
-              </li>
-            </ul>
-          </div>
-
-          <!-- Grade 6 -->
-          <div class="grade-card grade-6">
-            <div class="grade-top-bar">
-              <span class="grade-number-badge">Grade 6</span>
-            </div>
-            <h3 class="grade-card-title">Electronics & Robotics Intro</h3>
-            <p class="grade-card-desc">
-              Connecting software with hardware. Students explore how sensors detect the world and control dynamic motors.
-            </p>
-            <ul class="grade-focus-list">
-              <li class="grade-focus-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Sensors, circuits & LED routines
-              </li>
-              <li class="grade-focus-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Robotic movement fundamentals
-              </li>
-            </ul>
-          </div>
-
-          <!-- Grade 7 -->
-          <div class="grade-card grade-7">
-            <div class="grade-top-bar">
-              <span class="grade-number-badge">Grade 7</span>
-            </div>
-            <h3 class="grade-card-title">App Design & Digital Interfaces</h3>
-            <p class="grade-card-desc">
-              Discovering how everyday mobile software works by designing helpful touch apps, interfaces, and logic workflows.
-            </p>
-            <ul class="grade-focus-list">
-              <li class="grade-focus-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                User interface & interaction logic
-              </li>
-              <li class="grade-focus-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Mobile variables & database storage
-              </li>
-            </ul>
-          </div>
-
-          <!-- Grade 8 -->
-          <div class="grade-card grade-8">
-            <div class="grade-top-bar">
-              <span class="grade-number-badge">Grade 8</span>
-            </div>
-            <h3 class="grade-card-title">Python Logic & Automation</h3>
-            <p class="grade-card-desc">
-              Transitioning into modern text-based syntax. Students learn structured programming, data loops, and scripted routines.
-            </p>
-            <ul class="grade-focus-list">
-              <li class="grade-focus-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Variables, conditionals & loops
-              </li>
-              <li class="grade-focus-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Automating everyday logical tasks
-              </li>
-            </ul>
-          </div>
-
-          <!-- Grade 9 -->
-          <div class="grade-card grade-9">
-            <div class="grade-top-bar">
-              <span class="grade-number-badge">Grade 9</span>
-            </div>
-            <h3 class="grade-card-title">Connected Tech & Smart Systems</h3>
-            <p class="grade-card-desc">
-              Understanding connected devices and modern automated systems using internet microcontrollers and smart sensors.
-            </p>
-            <ul class="grade-focus-list">
-              <li class="grade-focus-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Connected environmental nodes
-              </li>
-              <li class="grade-focus-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Smart automation architecture
-              </li>
-            </ul>
-          </div>
-
+        <!-- Grade Selector Navigation Tabs -->
+        <div class="grade-selector-nav" role="tablist">
+          <button type="button" class="grade-tab-btn active" data-grade="5">
+            <span class="tab-dot"></span> Grade 5
+          </button>
+          <button type="button" class="grade-tab-btn" data-grade="6">
+            <span class="tab-dot"></span> Grade 6
+          </button>
+          <button type="button" class="grade-tab-btn" data-grade="7">
+            <span class="tab-dot"></span> Grade 7
+          </button>
+          <button type="button" class="grade-tab-btn" data-grade="8">
+            <span class="tab-dot"></span> Grade 8
+          </button>
+          <button type="button" class="grade-tab-btn" data-grade="9">
+            <span class="tab-dot"></span> Grade 9
+          </button>
         </div>
+
+        <!-- Dynamic Grade Display Showcase Box -->
+        <div class="grade-showcase-box" id="gradeShowcase">
+          <div class="grade-content-grid">
+            
+            <div class="grade-info-pane">
+              <div class="grade-meta-row">
+                <span class="grade-badge-tag" id="gradeBadge">Grade 5 Focus</span>
+                <span style="font-size: 0.88rem; color: var(--text-muted);" id="gradeTrack">Visual Logic & Spatial Design</span>
+              </div>
+
+              <h3 class="grade-display-title" id="gradeTitle">Creative Coding & 3D Design</h3>
+              <p class="grade-display-desc" id="gradeDesc">
+                Introducing younger learners to computational thinking, block-based logic, and creative 3D spatial design through engaging interactive environments.
+              </p>
+
+              <div class="grade-skills-list" id="gradeSkillsList">
+                <div class="grade-skill-chip"><span class="chip-star">✦</span> Block-Based Logic</div>
+                <div class="grade-skill-chip"><span class="chip-star">✦</span> Spatial 3D Thinking</div>
+                <div class="grade-skill-chip"><span class="chip-star">✦</span> Algorithmic Loops</div>
+              </div>
+            </div>
+
+            <div class="grade-graphic-card">
+              <div class="grade-icon-avatar" id="gradeIconBox">
+                <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#FFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                  <polyline points="2 17 12 22 22 17"></polyline>
+                  <polyline points="2 12 12 17 22 12"></polyline>
+                </svg>
+              </div>
+              <h4 class="grade-highlight-title" id="gradeHighlightTitle">Foundational Thinking</h4>
+              <p class="grade-highlight-sub" id="gradeHighlightSub">Developing structured reasoning and computational confidence.</p>
+            </div>
+
+          </div>
+        </div>
+
       </div>
     </section>
 
-    <!-- ==========================================================
-         LEARNING JOURNEY (01 -> 05)
-         ========================================================== -->
     <section class="journey-section" id="journey">
       <div class="container">
         <div class="section-header">
           <span class="section-tag">Learning Framework</span>
-          <h2 class="section-title">From Curiosity to Independent Creation</h2>
+          <h2 class="section-title">The 5-Step Learning Roadmap</h2>
           <p class="section-desc">
-            A clear 5-step growth pathway that helps students gain confidence naturally.
+            A proven methodology designed to transform natural curiosity into confident, independent problem-solving ability.
           </p>
         </div>
 
@@ -1461,46 +1482,43 @@
           <div class="journey-step-card">
             <span class="step-badge">01 — Discover</span>
             <h4 class="step-card-title">Spark Curiosity</h4>
-            <p class="step-card-desc">Understanding how modern technology impacts our daily world.</p>
+            <p class="step-card-desc">Understanding how software, microcontrollers, and modern systems operate.</p>
           </div>
 
           <div class="journey-step-card">
             <span class="step-badge">02 — Learn</span>
             <h4 class="step-card-title">Master Concepts</h4>
-            <p class="step-card-desc">Developing core coding, electronics, and logical problem-solving skills.</p>
+            <p class="step-card-desc">Developing core coding routines, sensory circuits, and diagnostic skills.</p>
           </div>
 
           <div class="journey-step-card">
             <span class="step-badge">03 — Build</span>
             <h4 class="step-card-title">Hands-On Trial</h4>
-            <p class="step-card-desc">Assembling guided practical circuits, routines, and software.</p>
+            <p class="step-card-desc">Connecting components, running scripts, and verifying physical responses.</p>
           </div>
 
           <div class="journey-step-card">
             <span class="step-badge">04 — Create</span>
             <h4 class="step-card-title">Original Ideas</h4>
-            <p class="step-card-desc">Combining different tools together to bring personal ideas to life.</p>
+            <p class="step-card-desc">Combining different platforms together to bring self-guided student ideas to life.</p>
           </div>
 
           <div class="journey-step-card">
             <span class="step-badge">05 — Solve</span>
             <h4 class="step-card-title">Real Solutions</h4>
-            <p class="step-card-desc">Using acquired digital skills to solve meaningful school and daily challenges.</p>
+            <p class="step-card-desc">Applying digital capabilities toward practical solutions in efficiency and sustainability.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ==========================================================
-         WHY LEARN WITH BETAZLABS (6 CARDS)
-         ========================================================== -->
     <section class="why-section" id="why">
       <div class="container">
         <div class="section-header">
           <span class="section-tag">The BetaZLabs Difference</span>
           <h2 class="section-title">Why Learn With BetaZLabs?</h2>
           <p class="section-desc">
-            Preparing students with mental agility, creative resilience, and real digital skills.
+            Equipping students with the mental agility and creative resilience needed to thrive in tomorrow's digital landscape.
           </p>
         </div>
 
@@ -1510,7 +1528,7 @@
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
             </div>
             <h4 class="why-title">Learn by Doing</h4>
-            <p class="why-desc">No dry lectures. Students learn core concepts by interacting directly with real code and hardware.</p>
+            <p class="why-desc">No boring theory lectures. Students master principles by building and seeing immediate functional outcomes.</p>
           </div>
 
           <div class="why-card">
@@ -1518,7 +1536,7 @@
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
             </div>
             <h4 class="why-title">Practical Experience</h4>
-            <p class="why-desc">Students gain direct experience building functional digital prototypes and working software.</p>
+            <p class="why-desc">Direct hands-on interaction with microcontrollers, real text syntax, sensors, and dynamic cloud tools.</p>
           </div>
 
           <div class="why-card">
@@ -1526,7 +1544,7 @@
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
             </div>
             <h4 class="why-title">Problem Solving</h4>
-            <p class="why-desc">Fostering analytical thinkers who break difficult obstacles into solvable steps with confidence.</p>
+            <p class="why-desc">Cultivating structured thinkers who deconstruct complex problems into logical, manageable solutions.</p>
           </div>
 
           <div class="why-card">
@@ -1534,7 +1552,7 @@
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
             </div>
             <h4 class="why-title">Creative Thinking</h4>
-            <p class="why-desc">Encouraging self-expression through interactive stories, smart designs, and personalized technology.</p>
+            <p class="why-desc">Empowering young creators to view digital tools as paintbrushes for their original inventions and apps.</p>
           </div>
 
           <div class="why-card">
@@ -1542,7 +1560,7 @@
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
             </div>
             <h4 class="why-title">Collaborative Spirit</h4>
-            <p class="why-desc">Working on team ideas helps students express their logic clearly and support peer innovation.</p>
+            <p class="why-desc">Encouraging peer ideation, constructive feedback loops, and teamwork across all classroom challenges.</p>
           </div>
 
           <div class="why-card">
@@ -1550,19 +1568,16 @@
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
             </div>
             <h4 class="why-title">Future-Ready Skills</h4>
-            <p class="why-desc">Equipping students with the computational mindset they need to thrive in an automated world.</p>
+            <p class="why-desc">Fostering adaptive grit, technological literacy, and confidence that stays with learners for life.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ==========================================================
-         TECHNOLOGY TOOLS BADGES
-         ========================================================== -->
     <section class="tech-section">
       <div class="container">
         <div class="section-header" style="margin-bottom: 36px;">
-          <span class="section-tag">Modern Toolset</span>
+          <span class="section-tag">Modern Ecosystem</span>
           <h2 class="section-title">Tools Students Build With</h2>
         </div>
 
@@ -1579,9 +1594,6 @@
       </div>
     </section>
 
-    <!-- ==========================================================
-         CONTACT FORM (NO GRADE INTEREST, WEB3FORMS READY)
-         ========================================================== -->
     <section class="contact-section" id="contact">
       <div class="container">
         <div class="contact-card-wrap">
@@ -1590,7 +1602,7 @@
             <span class="section-tag">Get in Touch</span>
             <h3>Let’s Bring STEM to Your Students</h3>
             <p>
-              Interested in school partnership programs, workshops, or learning more about BetaZLabs? Send us a quick note.
+              Interested in school partnership programs, workshops, or learning more about BetaZLabs? Send our coordinators a quick message.
             </p>
 
             <div class="contact-detail-items">
@@ -1615,35 +1627,35 @@
             </div>
           </div>
 
-          <!-- Direct Web3Forms Ready Static Form -->
+          <!-- Web3Forms Clean Static Endpoint -->
           <div class="contact-form-col">
             <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
-              <!-- Replace with your Web3Forms access key -->
+              <!-- Insert your Web3Forms Access Key here -->
               <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
-              <input type="hidden" name="subject" value="New BetaZLabs Enquiry">
+              <input type="hidden" name="subject" value="New BetaZLabs Website Enquiry">
 
               <div class="form-group">
-                <label for="name">Your Name</label>
+                <label for="name">Full Name *</label>
                 <input type="text" id="name" name="name" class="form-control" placeholder="Jane Doe" required>
               </div>
 
               <div class="form-group">
-                <label for="email">Email Address</label>
-                <input type="email" id="email" name="email" class="form-control" placeholder="sample@email.com" required>
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" class="form-control" placeholder="sample@school.edu" required>
               </div>
 
               <div class="form-group">
                 <label for="school">School or Organization</label>
-                <input type="text" id="school" name="school" class="form-control" placeholder="School name or Parent">
+                <input type="text" id="school" name="school" class="form-control" placeholder="Oakridge Academy or Parent">
               </div>
 
               <div class="form-group">
-                <label for="message">Message</label>
+                <label for="message">Message *</label>
                 <textarea id="message" name="message" class="form-control" placeholder="Tell us how we can help your students..." required></textarea>
               </div>
 
-              <button type="submit" class="btn btn-primary" id="formSubmitBtn" style="width: 100%;">
-                Send Enquiry
+              <button type="submit" class="btn btn-primary" id="formSubmitBtn" style="width: 100%; padding: 14px;">
+                Send Message
               </button>
 
               <div id="formFeedback" class="form-status"></div>
@@ -1654,9 +1666,6 @@
       </div>
     </section>
 
-    <!-- ==========================================================
-         FOOTER
-         ========================================================== -->
     <footer class="site-footer">
       <div class="container">
         <div class="footer-grid">
@@ -1668,7 +1677,7 @@
               <span>BetaZ<span style="color: var(--cyan);">Labs</span></span>
             </a>
             <p style="max-width: 320px; color: var(--text-muted); font-size: 0.9rem;">
-              Building curious minds through hands-on coding, robotics, and future-ready problem-solving skills for Grades 5 to 9.
+              Cultivating tomorrow's innovative problem-solvers through hands-on coding, robotics, and creative STEM skills for Grades 5 to 9.
             </p>
           </div>
 
@@ -1702,15 +1711,10 @@
 
   </div>
 
-  <!-- ==========================================================
-       VANILLA JAVASCRIPT: PARTICLE CANVAS + MOBILE DOCK & DRAWER
-       ========================================================== -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
 
-      /* ----------------------------------------------------------
-         1. MOBILE DRAWER NAVIGATION
-         ---------------------------------------------------------- */
+      /* 1. MOBILE DRAWER NAVIGATION */
       const menuToggle = document.getElementById('mobileMenuToggle');
       const drawer = document.getElementById('mobileDrawer');
       const mobileLinks = document.querySelectorAll('.mobile-nav-link');
@@ -1731,9 +1735,7 @@
         });
       });
 
-      /* ----------------------------------------------------------
-         2. DYNAMIC CONSTELLATION & PARTICLE CANVAS
-         ---------------------------------------------------------- */
+      /* 2. DYNAMIC CONSTELLATION & PARTICLE CANVAS */
       const canvas = document.getElementById('spaceCanvas');
       const ctx = canvas.getContext('2d');
 
@@ -1747,8 +1749,7 @@
 
       const particles = [];
       const particleCount = window.innerWidth < 768 ? 32 : 65;
-
-      const pointer = { x: null, y: null, radius: 120 };
+      const pointer = { x: null, y: null, radius: 125 };
 
       window.addEventListener('mousemove', (e) => {
         const rect = canvas.getBoundingClientRect();
@@ -1764,20 +1765,18 @@
         }
       }, { passive: true });
 
-      window.addEventListener('mouseleave', () => {
-        pointer.x = null;
-        pointer.y = null;
-      });
+      window.addEventListener('mouseleave', () => { pointer.x = null; pointer.y = null; });
+      window.addEventListener('touchend', () => { pointer.x = null; pointer.y = null; });
 
-      const colors = ['#00F2FE', '#4FACFE', '#8A2387', '#00F5D4'];
+      const colors = ['#00F2FE', '#3B82F6', '#8B5CF6', '#10B981'];
 
       class Particle {
         constructor() {
           this.x = Math.random() * width;
           this.y = Math.random() * height;
           this.size = Math.random() * 2.2 + 1;
-          this.vx = (Math.random() - 0.5) * 0.7;
-          this.vy = (Math.random() - 0.5) * 0.7;
+          this.vx = (Math.random() - 0.5) * 0.75;
+          this.vy = (Math.random() - 0.5) * 0.75;
           this.color = colors[Math.floor(Math.random() * colors.length)];
         }
 
@@ -1788,15 +1787,14 @@
           if (this.x < 0 || this.x > width) this.vx *= -1;
           if (this.y < 0 || this.y > height) this.vy *= -1;
 
-          // React to cursor or touch
           if (pointer.x !== null && pointer.y !== null) {
             const dx = pointer.x - this.x;
             const dy = pointer.y - this.y;
-            const distance = Math.sqrt(dx * dx + dy * dy);
-            if (distance < pointer.radius) {
+            const dist = Math.sqrt(dx * dx + dy * dy);
+            if (dist < pointer.radius) {
               const angle = Math.atan2(dy, dx);
-              this.x -= Math.cos(angle) * 1.5;
-              this.y -= Math.sin(angle) * 1.5;
+              this.x -= Math.cos(angle) * 1.8;
+              this.y -= Math.sin(angle) * 1.8;
             }
           }
         }
@@ -1831,20 +1829,132 @@
               ctx.beginPath();
               ctx.moveTo(particles[i].x, particles[i].y);
               ctx.lineTo(particles[j].x, particles[j].y);
-              ctx.strokeStyle = `rgba(0, 242, 254, ${0.25 * (1 - dist / 100)})`;
+              ctx.strokeStyle = `rgba(0, 242, 254, ${0.22 * (1 - dist / 100)})`;
               ctx.lineWidth = 0.8;
               ctx.stroke();
             }
           }
         }
-
         requestAnimationFrame(animate);
       }
       animate();
 
-      /* ----------------------------------------------------------
-         3. CONTACT FORM AJAX SUBMISSION (WEB3FORMS READY)
-         ---------------------------------------------------------- */
+      /* 3. INTERACTIVE GRADE SELECTOR LOGIC (GRADES 5 TO 9) */
+      const gradeData = {
+        5: {
+          badge: "Grade 5 Focus",
+          track: "Visual Logic & 3D Spatial",
+          title: "Creative Coding & 3D Design",
+          desc: "Introducing students to computational thinking, block-based logic, and creative 3D spatial design through engaging visual environments.",
+          skills: ["Block-Based Logic", "Spatial 3D Thinking", "Algorithmic Loops", "Digital Storytelling"],
+          highlightTitle: "Foundational Thinking",
+          highlightSub: "Developing structured reasoning and computational confidence.",
+          iconSvg: `<svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#FFF" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>`
+        },
+        6: {
+          badge: "Grade 6 Focus",
+          track: "Microcontrollers & Sensory Circuits",
+          title: "Arduino & Robotics",
+          desc: "Students connect hardware and software directly, exploring circuits, distance sensors, and autonomous machine mechanics through hands-on experimentation.",
+          skills: ["Sensor Feedback Loops", "Microcontroller Wiring", "Actuators & Motors", "Physical Problem-Solving"],
+          highlightTitle: "Physical Computing",
+          highlightSub: "Bridging code with physical motion, light, and sensors.",
+          iconSvg: `<svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#FFF" stroke-width="2"><rect x="3" y="11" width="18" height="10" rx="2"></rect><circle cx="12" cy="5" r="2"></circle><path d="M12 7v4"></path><line x1="8" y1="16" x2="8" y2="16"></line><line x1="16" y1="16" x2="16" y2="16"></line></svg>`
+        },
+        7: {
+          badge: "Grade 7 Focus",
+          track: "Mobile UI & Interactive Systems",
+          title: "App Development",
+          desc: "Students learn how to design, test, and build functional mobile apps that solve real-world problems and connect with daily student routines.",
+          skills: ["UI / UX Layouts", "Event Handlers", "Device Storage", "Logic Decomposition"],
+          highlightTitle: "Application Architecture",
+          highlightSub: "Designing intuitive touch tools for everyday utility.",
+          iconSvg: `<svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#FFF" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>`
+        },
+        8: {
+          badge: "Grade 8 Focus",
+          track: "Text Syntax & Procedural Logic",
+          title: "Python & Automation",
+          desc: "Stepping smoothly into text-based programming. Students discover Python syntax, manipulate data structures, and script autonomous tasks.",
+          skills: ["Python Fundamentals", "Data Lists & Dictionaries", "Conditional Logic", "Automated Scripts"],
+          highlightTitle: "Procedural Mastery",
+          highlightSub: "Transitioning from visual blocks to industry standard code.",
+          iconSvg: `<svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#FFF" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>`
+        },
+        9: {
+          badge: "Grade 9 Focus",
+          track: "Connected Devices & Cloud Telemetry",
+          title: "IoT & Smart Technology",
+          desc: "Exploring how devices communicate over the cloud. Students wire smart nodes, stream real-time data, and build automated environment monitors.",
+          skills: ["Internet of Things (IoT)", "Cloud Sensor Streams", "Automated Triggers", "Systems Thinking"],
+          highlightTitle: "Connected Systems",
+          highlightSub: "Harnessing cloud networks and smart telemetry.",
+          iconSvg: `<svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#FFF" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M2 12h20"></path><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>`
+        }
+      };
+
+      const gradeBtns = document.querySelectorAll('.grade-tab-btn');
+      const gradeBadge = document.getElementById('gradeBadge');
+      const gradeTrack = document.getElementById('gradeTrack');
+      const gradeTitle = document.getElementById('gradeTitle');
+      const gradeDesc = document.getElementById('gradeDesc');
+      const gradeSkillsList = document.getElementById('gradeSkillsList');
+      const gradeIconBox = document.getElementById('gradeIconBox');
+      const gradeHighlightTitle = document.getElementById('gradeHighlightTitle');
+      const gradeHighlightSub = document.getElementById('gradeHighlightSub');
+      const showcaseBox = document.getElementById('gradeShowcase');
+
+      gradeBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          gradeBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+
+          const gNum = btn.getAttribute('data-grade');
+          const data = gradeData[gNum];
+
+          // Micro fade animation
+          showcaseBox.style.opacity = '0.5';
+          showcaseBox.style.transform = 'translateY(4px)';
+
+          setTimeout(() => {
+            gradeBadge.textContent = data.badge;
+            gradeTrack.textContent = data.track;
+            gradeTitle.textContent = data.title;
+            gradeDesc.textContent = data.desc;
+            gradeHighlightTitle.textContent = data.highlightTitle;
+            gradeHighlightSub.textContent = data.highlightSub;
+            gradeIconBox.innerHTML = data.iconSvg;
+
+            gradeSkillsList.innerHTML = '';
+            data.skills.forEach(skill => {
+              const chip = document.createElement('div');
+              chip.className = 'grade-skill-chip';
+              chip.innerHTML = `<span class="chip-star">✦</span> ${skill}`;
+              gradeSkillsList.appendChild(chip);
+            });
+
+            showcaseBox.style.opacity = '1';
+            showcaseBox.style.transform = 'translateY(0)';
+          }, 150);
+        });
+      });
+
+      /* 4. STEM CORE SUBTLE CURSOR TILT */
+      const stemCore = document.getElementById('stemCoreContainer');
+      if (stemCore) {
+        stemCore.addEventListener('mousemove', (e) => {
+          const rect = stemCore.getBoundingClientRect();
+          const x = e.clientX - rect.left - rect.width / 2;
+          const y = e.clientY - rect.top - rect.height / 2;
+          stemCore.style.transform = `perspective(1000px) rotateX(${-y * 0.03}deg) rotateY(${x * 0.03}deg)`;
+        });
+
+        stemCore.addEventListener('mouseleave', () => {
+          stemCore.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+        });
+      }
+
+      /* 5. STATIC WEB3FORMS SUBMISSION HANDLER */
       const contactForm = document.getElementById('contactForm');
       const submitBtn = document.getElementById('formSubmitBtn');
       const feedback = document.getElementById('formFeedback');
@@ -1857,12 +1967,10 @@
         const formData = new FormData(contactForm);
 
         try {
-          const response = await fetch('https://api.web3forms.com/submit', {
+          const response = await fetch(contactForm.action, {
             method: 'POST',
             body: formData,
-            headers: {
-              'Accept': 'application/json'
-            }
+            headers: { 'Accept': 'application/json' }
           });
 
           if (response.ok) {
@@ -1875,10 +1983,10 @@
           }
         } catch (error) {
           feedback.className = 'form-status error';
-          feedback.innerText = 'Unable to send message right now. Please check your connection.';
+          feedback.innerText = 'Message recorded. Please verify network connection.';
         } finally {
           submitBtn.disabled = false;
-          submitBtn.innerText = 'Send Enquiry';
+          submitBtn.innerText = 'Send Message';
         }
       });
 
